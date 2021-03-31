@@ -30,25 +30,6 @@ function countdown(timeLeft) {
     }, 1000);
 }
 
-//hide info box
-//quitBtn.addEventListener("click", function() {
-
-//});
-
-// restartBtn.onclick = ()=> {
-//     //hide info box
-//     infoBox.classList.remove("activeInfo"); 
-//     //show quiz box
-//     quizBox.classList.add("activeQuiz"); 
-//     //calling showQuestions function
-//     showQuestions(0); 
-//     //passing 1 parameter to queCounter
-//     queCounter(1); 
-//     //calling startTimer function
-//     startTimer(75); 
-//     //calling startTimerLine function
-//     startTimerLine(0); 
-// }
 function showQuestions(index){
     var que_text = document.querySelector(".que_text");
 
@@ -72,6 +53,7 @@ function showQuestions(index){
 }
 
 function optionSelected(i, index) {
+  //when answer is correct, move to the next question
   if (i == questions[index].answer) {
     showQuestions(index + 1);
   } 
