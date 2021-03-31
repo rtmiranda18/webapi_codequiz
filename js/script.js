@@ -1,35 +1,44 @@
-var startBtn = document.querySelector(".start_btn button");
-var infoBox = document.querySelector(".info_box");
-var quitBtn = info_box.querySelector(".buttons .quit");
-var restartBtn = info_box.querySelector(".buttons .restart");
-var quizBox = document.querySelector(".quiz_box");
-var resultBox = document.querySelector(".result_box");
-var optionList = document.querySelector(".option_list");
+var startBtn = document.querySelector(".startBtn button");
+var infoBox = document.querySelector(".infoBox");
+var quitBtn = document.querySelector(".buttons .quit");
+var restartBtn = document.querySelector(".buttons .restart");
+var quizBox = document.querySelector(".quizBox");
+var resultBox = document.querySelector(".resultBox");
+var optionList = document.querySelector(".optionList");
+var quizTimer =document.querySelector(".quizTimer");
 
-//show info box
-startBtn.onclick = ()=>{
-    infoBox.classList.add("activeInfo"); 
-}
+    //show info box
+startBtn.addEventListener("click", function() {
+    //close button
+startBtn.remove("button");
+    //remove info box
+infoBox.remove(".infoBox")
+    //start quiz
+    showQuestions(0);
+    //start timer
+    var  
+
+});
 
 //hide info box
-quitBtn.onclick = ()=>{
-    infoBox.classList.remove("activeInfo"); 
-}
+//quitBtn.addEventListener("click", function() {
 
-restartBtn.onclick = ()=>{
-    //hide info box
-    infoBox.classList.remove("activeInfo"); 
-    //show quiz box
-    quizBox.classList.add("activeQuiz"); 
-    //calling showQuestions function
-    showQuestions(0); 
-    //passing 1 parameter to queCounter
-    queCounter(1); 
-    //calling startTimer function
-    startTimer(75); 
-    //calling startTimerLine function
-    startTimerLine(0); 
-}
+//});
+
+// restartBtn.onclick = ()=> {
+//     //hide info box
+//     infoBox.classList.remove("activeInfo"); 
+//     //show quiz box
+//     quizBox.classList.add("activeQuiz"); 
+//     //calling showQuestions function
+//     showQuestions(0); 
+//     //passing 1 parameter to queCounter
+//     queCounter(1); 
+//     //calling startTimer function
+//     startTimer(75); 
+//     //calling startTimerLine function
+//     startTimerLine(0); 
+// }
 function showQuestions(index){
     var que_text = document.querySelector(".que_text");
 
@@ -42,7 +51,7 @@ function showQuestions(index){
     //adding new span tag inside que_tag
     que_text.innerHTML = que_tag; 
     //adding new div tag inside option_tag
-    option_list.innerHTML = option_tag; 
+    optionList.innerHTML = option_tag; 
     
     var option = optionList.querySelectorAll(".option");
 
@@ -107,4 +116,4 @@ var questions = [
       "3. for loops",
       "4. console log"
     ]
-  },
+  }]
