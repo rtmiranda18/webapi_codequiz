@@ -67,8 +67,14 @@ function showQuestions(index){
 
     // set onclick attribute to all available options
     for(i=0; i < option.length; i++){
-        option[i].setAttribute("onclick", "optionSelected(this)");
+        option[i].setAttribute("onclick", "optionSelected("+i+", "+index+")");
     }
+}
+
+function optionSelected(i, index) {
+  if (i == questions[index].answer) {
+    showQuestions(index + 1);
+  } 
 }
 
 var questions = [
