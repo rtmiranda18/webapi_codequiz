@@ -1,0 +1,154 @@
+body{
+    background: maroon;
+}
+
+.startBtn, .infoBox, .quizBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.startBtn button {
+    font-size: 25px;
+    font-weight: 500;
+    color:black;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color:cornsilk;
+    border: px solid rgb(53, 0, 0);
+    cursor:pointer;
+}
+
+.startBtn button:hover {
+    background:  rgb(0, 124, 0);
+    color: #fff;
+    border: 2px solid#fff;
+}
+
+.infoBox {
+    width: 700px;
+    background: cornsilk;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translate(-50%,-50%)scale(1);
+}
+
+.infoBox .infoTitle {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size :20px;
+    font-weight: 600;
+}
+
+.infoBox .infoRules {
+    padding: 15px 35px;
+    margin: 5px;
+    font-size: 17px;
+}
+
+.infoBox .buttons  {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgray;
+}
+
+.infoBox .buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 2px solid rgb(53, 0, 0);
+    color: rgb(53, 0, 0);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons button.clearBtn {
+    border: 2px solid rgb(53, 0, 0);
+    color: #fff;
+    background:  rgb(53, 0, 0);
+}
+
+.buttons button.clearBtn:hover {
+    background: rgb(124, 0, 0);;
+}
+
+.buttons button.returnBtn {
+    border: 2px solid rgb(53, 0, 0);
+    color: #fff;
+    background:  rgb(53, 0, 0);
+}
+
+.buttons button.returnBtn:hover {
+    background: rgb(124, 0, 0);;
+    color: #fff;
+}
+
+.quizBox {
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    pointer-events: none;
+    transform: translate(-50%,-50%)scale(1);
+}
+.quizBox {
+    position: relative;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+} 
+
+.quizBox header .title {
+    font-style: 20px;
+    font-weight: 600;
+}
+
+.quizBox header .quizTimer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: cornsilk;
+    border: 1px solid black (255, 193, 118);
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quizBox header .timer .timeLeft {
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quizBox header .timer .timerSec {
+    font-weight: 500;
+    font-size: 18px;
+    background: rgb(56, 0, 0);
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(179, 179, 179);
+}
