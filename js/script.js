@@ -24,7 +24,7 @@ function countdown(timeLeft) {
             clearInterval(quizTimer);
         document.getElementById("countdown").innerHTML = "Finished";
         } else {
-        document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
+        document.getElementById("countdown").innerHTML = timeLeft;
     }
     timeLeft -= 1;
     }, 1000);
@@ -62,6 +62,8 @@ function optionSelected(i, index) {
   else {
     answerStatus.innerHTML = "Incorrect!";
   //grab value from clock and subract 10 seconds
+    var timeleftNow = document.getElementById("countdown").textContent;
+    countdown(parseInt(timeleftNow) - 10);
   }
 }
 
