@@ -5,7 +5,6 @@ var restartBtn = document.querySelector(".buttons .restart");
 var quizBox = document.querySelector(".quizBox");
 var resultBox = document.querySelector(".resultBox");
 var optionList = document.querySelector(".optionList");
-var quizTimer =document.querySelector(".quizTimer");
 
     //show info box
 startBtn.addEventListener("click", function() {
@@ -15,10 +14,21 @@ startBtn.remove("button");
 infoBox.remove(".infoBox")
     //start quiz
     showQuestions(0);
-    //start timer
-    var  
-
+    countdown(75);
 });
+
+//start timer
+function countdown(timeLeft) {
+    var quizTimer = setInterval(function(){
+        if(timeLeft <= 0){
+            clearInterval(quizTimer);
+        document.getElementById("countdown").innerHTML = "Finished";
+        } else {
+        document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
+    }
+    timeLeft -= 1;
+    }, 1000);
+}
 
 //hide info box
 //quitBtn.addEventListener("click", function() {
