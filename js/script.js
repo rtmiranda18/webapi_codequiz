@@ -5,7 +5,7 @@ var restartBtn = document.querySelector(".buttons .restart");
 var quizBox = document.querySelector(".quizBox");
 var resultBox = document.querySelector(".resultBox");
 var optionList = document.querySelector(".optionList");
-
+var answerStatus = document.querySelector(".answerStatus");
     //show info box
 startBtn.addEventListener("click", function() {
     //close button
@@ -55,8 +55,14 @@ function showQuestions(index){
 function optionSelected(i, index) {
   //when answer is correct, move to the next question
   if (i == questions[index].answer) {
+    answerStatus.innerHTML = "Correct!";
     showQuestions(index + 1);
   } 
+ //when answer is incorrect 
+  else {
+    answerStatus.innerHTML = "Incorrect!";
+  //grab value from clock and subract 10 seconds
+  }
 }
 
 var questions = [
